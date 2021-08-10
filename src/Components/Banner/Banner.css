@@ -1,0 +1,25 @@
+.banner {
+  width: 100vw;
+  height: 20rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.banner--image {
+  width: 100%;
+}
+
+.banner--image > img {
+  height: 20rem;
+  object-fit: cover;
+}
+
+.banner--content {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.banner--content > h1 {
+  margin-bottom: 1rem;
+  letter-spacing: var(--spacing);
+}

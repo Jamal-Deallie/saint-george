@@ -1,0 +1,16 @@
+.card--container {
+  width: 85vw;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min-max(17rem, 1fr));
+  grid-gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+.card--container {
+  grid-template-columns: repeat(2, 1fr);
+}
+}

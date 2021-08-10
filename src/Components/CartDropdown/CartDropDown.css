@@ -1,0 +1,25 @@
+.cartdd {
+  background-color: #ffffff;
+  position: absolute;
+  top: var(--nav-height);
+  height: 34rem;
+  width: 24rem;
+  right: 0;
+  border: solid 1px var(--navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.cartdd--items {
+  height: 24rem;
+}
+
+.cartdd--button {
+  width: 100%;
+  display: block;
+  margin-top: auto;
+}
+

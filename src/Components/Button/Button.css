@@ -1,0 +1,38 @@
+.primary--btn {
+  background-color: #0c2233;
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: var(--secondary-font);
+  font-size: var(--body);
+  letter-spacing: 0.05rem;
+  padding: 13px 75px;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+}
+.primary--btn:hover {
+  background-color: var(--gold);
+}
+.primary--btn:active {
+  position: relative;
+  top: 1px;
+}
+
+.outline--btn {
+  background: none;
+  display: block;
+  cursor: pointer;
+  color: var(--gold);
+  font-size: var(--body);
+  letter-spacing: 0.05rem;
+  padding: 10px 50px;
+  text-decoration: none;
+  border: solid;
+  width: 100%;
+}
+
+.outline--btn:hover {
+  background-color: var(--navy);
+}

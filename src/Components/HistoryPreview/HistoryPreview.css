@@ -1,0 +1,33 @@
+.historyPreview {
+ margin: 2rem 0;
+ width: 100%;
+}
+
+.historyPreview--img > img {
+  width: 90vw;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.historyPreview--content {
+    padding: 0 2rem;
+}
+.historyPreview--content > h2{
+    margin: 2rem 0;
+    font-weight: 700;
+    font-style: italic;
+    font-family: colosseum, sans-serif;
+    color: var(--navy);
+    font-size: 3.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.historyPreview--content > p{
+    font-size: var(--body);
+   font-weight: 300;
+}
+
+.historyPreview--content > button {
+    margin-top: 2rem;
+}

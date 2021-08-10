@@ -1,0 +1,42 @@
+@media only screen and (max-width: 600px) {
+  .landing {
+    background-image: url('/src/Images/mobile-landing.png');
+    background-position: center;
+    background-size: cover;
+    --aspect-ratio: 390/254;
+    height: 35rem;
+    width: 100vw;
+    padding-bottom: calc(100% / var(--aspect-ratio));
+    position: relative;
+  }
+
+  .landing--content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 2rem 4rem;
+  }
+
+  hr.landing--border {
+    border: solid 0.5px var(--white);
+  }
+
+  .landing--content > h3 {
+    padding-top: 1rem;
+    font-size: var(--title);
+    font-weight: 500;
+  }
+
+  .landing--headline {
+    font-weight: 600;
+    font-family: var(--primary-font);
+    color: var(--navy);
+    font-size: 3.6rem;
+    letter-spacing: 0.1rem;
+    padding-top: 1rem;
+    margin-bottom: 13rem;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.048),
+      1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+}
