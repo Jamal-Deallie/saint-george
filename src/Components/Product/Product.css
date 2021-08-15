@@ -1,0 +1,22 @@
+.product--card {
+  padding: 0 2rem;
+}
+.product--card_img {
+  width: 100vw;
+}
+
+.product--card_img > img {
+  width: 100%;
+  height: 35rem;
+  object-fit: contain;
+}
+
+.product--card_btn {
+  margin-top: -7rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+div.product--card_desc > * {
+  margin-bottom: 1rem;
+}

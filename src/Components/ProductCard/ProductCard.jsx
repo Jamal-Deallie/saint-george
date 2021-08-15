@@ -2,9 +2,7 @@ import React from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ id, name, brand, estimatedMarketValue, image}) => {
-  const { thumbnail } = image;
-  
+const ProductCard = ({ id, name, brand, estimatedMarketValue, thumbnail}) => {
   return (
     <Link to={`/product/${id}`}>
       <div className="product--card" key={id}>
@@ -12,7 +10,6 @@ const ProductCard = ({ id, name, brand, estimatedMarketValue, image}) => {
         <span id={id}>{brand}</span>
         <h3>{name}</h3>
         <span>${estimatedMarketValue}</span>
-
       </div>
     </Link>
   );

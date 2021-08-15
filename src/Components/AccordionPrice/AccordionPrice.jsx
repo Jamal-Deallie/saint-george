@@ -7,9 +7,9 @@ const AccordionPrice = () => {
     <div>
       <button className="accordion"> Price</button>
       <div className="accordion--content">
-        <label for="from">From:</label>
+        <label htmlFor="from">From:</label>
         <input type="text" id="from" name="from" />
-        <label for="to">To:</label>
+        <label htmlFor="to">To:</label>
         <input type="text" id="to" name="to" />
       </div>
     </div>

@@ -3,8 +3,7 @@ import Button from "../../Components/Button/Button";
 import "./HistoryPreview.css";
 
 
-export const HistoryPreview = (props) => {
-  const {id, src, title, paragraph } = props;
+export const HistoryPreview = ({id, src, title, paragraph }) => {
   return (
     <div className='historyPreview' key={id}>
       <div className="historyPreview--img">

@@ -1,0 +1,15 @@
+.sizeButton{
+  width: 100%;
+  margin: 1rem 0;
+}
+
+div.sizeButton > input[type="submit"] {
+  background-color: white;
+  border: solid 0.1rem var(--navy);
+  color: var(--navy);
+  height: 3rem;
+  width: 3.5rem;
+  text-decoration: none;
+  margin: 0.4rem 0.2rem;
+  cursor: pointer;
+}

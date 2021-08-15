@@ -28,7 +28,7 @@ const Filter = ({ results }) => {
       </div>
       <div
         className={
-          showFilter ? "filter--options active" : "filter--options active"
+          showFilter ? "filter--options active" : "filter--options"
         }
       >
         <button onClick={toggle} className="filter--close_btn">

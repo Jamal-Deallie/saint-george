@@ -1,28 +1,17 @@
 import React, { useEffect } from "react";
-// import { Sneaker_Data as responseData } from "../../Shared/Sneaker_Data";
 import ProductCard from "../ProductCard/ProductCard";
 import Subheader from "../../Components/Subheader/Subheader";
-import axios from "axios";
 import "./ProductsPreview.css";
 import { useSelector, useDispatch } from "react-redux";
-import { setProducts } from "../../Redux/Actions/productActions";
-import { Sneaker_Data } from "../../Shared/Sneaker_Data";
+import { fetchProducts } from "../../Redux/Actions/productActions";
+
 
 export const ProductsPreview = () => {
   const products = useSelector((state) => state.allProducts.products);
   const dispatch = useDispatch();
 
-  const fetchProducts = async () => {
-    const responseData = await axios
-      .get("https://my-sneaker-api.herokuapp.com/sneakers")
-      .catch((err) => {
-        console.log("Err", err);
-      });
-    dispatch(setProducts(responseData.data));
-  };
-
   useEffect(() => {
-    fetchProducts();
+    dispatch(fetchProducts());
   }, []);
 
   console.log("Products:", products);
@@ -37,12 +26,12 @@ export const ProductsPreview = () => {
 
   const filterData = (keyword, gender) => {
     return products.filter(
-      (product) => product.story.includes(keyword) && product.gender === `${gender}`
+      (product) => product.name.includes(keyword) && product.gender === `${gender}`
     );
   };
 
 
-  console.log(filterGender);
+  console.log(products);
 
 
 

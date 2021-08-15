@@ -1,6 +1,6 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
-import src from "../../Images/saint-logo.svg";
+import src from "../../Assets/Images/saint-logo.svg";
 import './Footer.css';
 
 const Footer = () => {

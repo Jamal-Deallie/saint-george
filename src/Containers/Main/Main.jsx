@@ -21,6 +21,7 @@ const Main = () => {
         <Route path="/women" component={Women} />
         <Route path="/kids" component={Kids} />
         <Route path="/yeezy" component={Yeezy} />
+        <Route path="/brand/:brandKeyword" component={Yeezy} />
         <Route path="/product/:productId" exact component={ProductDetails} />
         <Route>404 Not Found</Route>
       </Switch>

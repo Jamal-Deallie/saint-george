@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
   .landing {
-    background-image: url('/src/Images/mobile-landing.png');
+    background-image: url('/src/Assets/Images/mobile-landing.png');
     background-position: center;
     background-size: cover;
     --aspect-ratio: 390/254;

@@ -3,7 +3,7 @@ export const Yeezy_Items = [
     id: "1",
     title: "Shop Yeezy",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus elit at ex luctus, vel facilisis mi posuere.",
-    src: "./Yeezy.png",
+    src: "/Images//Yeezy.png",
     alt: "Nike Air Yeezy 1, Grammy",
   },
 ];

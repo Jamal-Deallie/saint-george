@@ -21,7 +21,7 @@ const AccordionModel = () => {
               {models.map(({ id, model }) => (
                 <div className="accordion--content" key={id}>
                   <input type="radio" id={model} name="model" value={model} />
-                  <label for={model}>{model}</label>
+                  <label htmlFor={model}>{model}</label>
                 </div>
               ))}
             </div>

@@ -9,9 +9,9 @@ const AccordionYear = () => {
       <button className="accordion"> Year</button>
       {openAccordion && (
         <div className="accordion--content">
-          <label for="from">From:</label>
+          <label htmlFor="from">From:</label>
           <input type="text" id="from" name="from" />
-          <label for="to">To:</label>
+          <label htmlFor="to">To:</label>
           <input type="text" id="to" name="to" />
         </div>
       )}

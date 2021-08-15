@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as MdIcons from "react-icons/md";
-import src from "../../Images/saint-logo.svg";
+import src from "../../Assets/Images/saint-logo.svg";
 import { NavLink, Link } from "react-router-dom";
 import { Link_Items as items } from "../../Shared/Link_Items";
 import CartIcon from "../../Components/CartIcon/CartIcon";
@@ -60,7 +60,7 @@ const Header = () => {
           })}
         </ul>
         <div className="nav--menu_locations">
-          <h3>Retail Stores</h3>
+          <h2>Retail Stores</h2>
           <div className="location--dallas">
             <h3>Saint George - Dallas</h3>
             <span>123 Main Street, Dallas, TX, 75001</span>
@@ -71,13 +71,13 @@ const Header = () => {
           </div>
         </div>
         <div className="nav--menu_contact">
-          <h3>Customer Service</h3>
+          <h2>Customer Service</h2>
           <h3>214-123-4567</h3>
           <h3>contact@saintgeorge</h3>
           <div className="nav--menu_social">
             <FaIcons.FaFacebookF />
             <FaIcons.FaTwitter />
-            <FaIcons.FaInstagram />
+            <FaIcons.FaInstagramSquare />
             <FaIcons.FaYoutube />
           </div>
         </div>

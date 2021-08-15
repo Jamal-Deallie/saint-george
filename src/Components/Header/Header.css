@@ -8,12 +8,12 @@
   z-index: 2;
 }
 
-.cart.active{
-    display: block;
-} 
+.cart.active {
+  display: block;
+}
 
-.cart{
-    display: none;
+.cart {
+  display: none;
 }
 
 .nav--items {
@@ -75,9 +75,17 @@
   background: var(--gold);
   height: 5rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--body);
 }
 
-div.header--signin > * {
+div.header--signin > svg {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+}
+
+div.header--signin > span {
   font-family: var(--secondary-font);
   font-size: var(--body);
 }
@@ -135,34 +143,77 @@ div.header--signin > * {
   color: var(--gold);
 }
 
-.nav--menu_contact, .nav--menu_locations, .nav--menu_social{
+.nav--menu_contact,
+.nav--menu_locations,
+.nav--menu_social {
   width: 100%;
-
 }
 
-div.nav--menu_locations > *{
-  color:var(--gold);
+.nav--menu_locations {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+div.nav--menu_locations > * {
+  color: var(--gold);
   font-weight: 300;
-    font-size: var(--body);
-   letter-spacing: 0.05rem;
+  font-size: var(--body);
+  letter-spacing: 0.05rem;
+}
+
+div.nav--menu_locations > h3 {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: var(--body);
+  letter-spacing: 0.05rem;
+}
+
+.location--dallas {
+  margin-bottom: 1rem;
+}
+
+.nav--menu_contact {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
 }
 div.nav--menu_contact > * {
   color: var(--gold);
-    font-weight: 300;
-      font-size: var(--body);
-   letter-spacing: 0.05rem;
+  font-weight: 300;
+  font-size: var(--body);
+  letter-spacing: 0.05rem;
+}
+
+.nav--menu_contact > h3 {
+  font-weight: 500;
+}
+
+.nav--menu_social {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--gold);
+  height: 5rem;
 }
 
 div.nav--menu_social > * {
-  color: var(--gold);
-    font-weight: 300;
-      font-size: var(--body);
-   letter-spacing: 0.05rem;
+  color: var(--navy);
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  margin: 0 1.5rem;
 }
 
-.location--dallas > h3, .location--plano > h3 {
-    color:var(--gold);
-  font-weight: 300;
-    font-size: var(--body);
-   letter-spacing: 0.05rem;
+.location--dallas > h3,
+.location--plano > h3 {
+  color: var(--gold);
+  font-weight: 500;
+  font-size: var(--body);
+  letter-spacing: 0.05rem;
 }

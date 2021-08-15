@@ -7,26 +7,20 @@ export const Link_Items = [
   },
   {
     id: 1,
+    title: "Stores",
+    path: "/stores",
+    cname: "nav--link",
+  },
+  {
+    id: 2,
     title: "Men",
     path: "/men",
     cname: "nav--link",
   },
   {
-    id: 2,
-    title: "Women",
-    path: "/men",
-    cname: "nav--link",
-  },
-  {
     id: 3,
-    title: "Kids",
-    path: "/men",
-    cname: "nav--link",
-  },
-  {
-    id: 4,
-    title: "Infants",
-    path: "/men",
+    title: "Women",
+    path: "/women",
     cname: "nav--link",
   },
   {
