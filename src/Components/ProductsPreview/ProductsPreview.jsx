@@ -37,13 +37,13 @@ export const ProductsPreview = () => {
 
   return (
     <>
-       <Subheader subheader={"New Arrivals"} /> 
+      <Subheader subheader={"New Arrivals"} src={"newarrivals"}/>
       <div className="card--container">
         {products.slice(0, 4).map(({ sku, ...otherProductProps }) => {
           return <ProductCard key={sku} {...otherProductProps} />;
           })}
       </div>
-      <Subheader subheader={"Air Jordan"} />
+      <Subheader subheader={"Air Jordan"} src={"jordan"} />
       <div className="card--container">
         {filterBrand("Air Jordan", "men")
             .slice(0, 4)
@@ -51,7 +51,7 @@ export const ProductsPreview = () => {
               return <ProductCard key={sku} {...otherProductProps} />;
             })}
       </div>
-      <Subheader subheader={"Yeezy"} />
+      <Subheader subheader={"Yeezy"} src={"yeezy"}/>
       <div className="card--container">
         {filterBrand("adidas", "men")
             .slice(0, 4)
@@ -59,7 +59,7 @@ export const ProductsPreview = () => {
               return <ProductCard key={sku} {...otherProductProps} />;
             })}
       </div>
-      <Subheader subheader={"Nike"} />
+      <Subheader subheader={"Nike"} src={"nike"}/>
       <div className="card--container">
         {filterBrand("Nike", "men")
             .slice(0, 4)

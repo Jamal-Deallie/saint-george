@@ -18,30 +18,28 @@ const Filter = ({ results }) => {
 
   return (
     <div className="filter">
-      <div onClick={toggle} className="filter--icon">
-        <AiIcons.AiFillFunnelPlot />
-        <span>Show Filter</span>
-      </div>
-      <div>
-        <span>Results</span>
-        <span>({results})</span>
-      </div>
-      <div
-        className={
-          showFilter ? "filter--options active" : "filter--options"
-        }
-      >
-        <button onClick={toggle} className="filter--close_btn">
-          &#88;
-        </button>
-        <h1>Filter</h1>
+      <div className="filter--wrapper">
+        <div onClick={toggle} className="filter--icon">
+          <AiIcons.AiFillFunnelPlot />
+          <span>Show Filter</span>
+        </div>
+        <div>
+          <span>Results</span>
+          <span>({results})</span>
+        </div>
+        <div
+          className={showFilter ? "filter--options active" : "filter--options"}
+        >
+          <button onClick={toggle} className="filter--close_btn">
+            &#88;
+          </button>
+          <h1>Filter</h1>
 
-        
-        <AccordionModel/>
-        <AccordionSize gender="Men"/>
+          <AccordionModel />
+          <AccordionSize gender="Men" />
 
-
-        <Button>Apply</Button>
+          <Button>Apply</Button>
+        </div>
       </div>
     </div>
   );

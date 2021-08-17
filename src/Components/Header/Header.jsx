@@ -9,13 +9,13 @@ import CartIcon from "../../Components/CartIcon/CartIcon";
 import SearchIcon from "../../Components/SearchIcon/SearchIcon";
 import "./Header.css";
 import CartDropDown from "../../Components/CartDropdown/CartDropDown";
+import { useSelector} from "react-redux";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
 
-  const [cartOpen, setCartOpen] = useState(false);
-  const toggleCart = () => setCartOpen(!cartOpen);
+  const hidden = useSelector((state) => state.cart.hidden);
 
   return (
     <div className="header">
@@ -26,16 +26,9 @@ const Header = () => {
         <Link to="/">
           <img src={src} alt="Saint George Logo" className="logo" />
         </Link>
-        <div className="nav--icons">
-          <SearchIcon />
-          <div onClick={toggleCart}>
-            <CartIcon />
-          </div>
-        </div>
-        <div className={cartOpen ? "cart active" : "cart"}>
-          <CartDropDown />
-        </div>
+        <CartIcon />
       </div>
+      {hidden ? null : <CartDropDown />}
       <nav className={open ? "nav--menu active" : "nav--menu"}>
         <div className="close--btn" onClick={toggle}>
           <AiIcons.AiOutlineClose />

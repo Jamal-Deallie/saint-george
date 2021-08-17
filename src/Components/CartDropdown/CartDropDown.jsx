@@ -2,11 +2,9 @@ import React from 'react';
 import './CartDropDown.css';
 import Button from '../../Components/Button/Button';
 
-const CartDropDown = (props) => {
-  const { type } = props;
-  const className = type === "active" ? "cartdd active" : "cartdd";
+const CartDropDown = () => {
   return (
-    <div className={className}>
+    <div className='cart--dd'>
       <div className="cartdd--items">
         <h1>Items</h1>
       </div>

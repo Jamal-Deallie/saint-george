@@ -3,7 +3,7 @@
   margin: 1rem 0;
 }
 
-div.sizeButton > input[type="submit"] {
+.sizeButton > button {
   background-color: white;
   border: solid 0.1rem var(--navy);
   color: var(--navy);
@@ -12,4 +12,9 @@ div.sizeButton > input[type="submit"] {
   text-decoration: none;
   margin: 0.4rem 0.2rem;
   cursor: pointer;
+}
+
+.sizeButton > button:hover {
+  background: var(--navy);
+  color: var(--white);
 }

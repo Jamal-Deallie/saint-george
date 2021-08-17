@@ -1,16 +1,17 @@
-.cartdd {
+.cart--dd {
   background-color: #ffffff;
-  position: absolute;
   top: var(--nav-height);
-  height: 34rem;
-  width: 24rem;
-  right: 0;
+  height: 44rem;
+  width: 34rem;
   border: solid 1px var(--navy);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  z-index: 2;
+  position: absolute;
+  right: 0;
 }
 
 .cartdd--items {

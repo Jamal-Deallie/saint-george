@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProduct } from "../../Redux/Actions/productActions";
 import Product from "../../Components/Product/Product";
+import Loading from "../../Components/Loading/Loading";
 
 const ProductDetails = () => {
   const product = useSelector((state) => state.product);
@@ -22,9 +23,9 @@ const ProductDetails = () => {
   return (
     <>
       {Object.keys(product).length === 0 ? (
-        <div>Loading...</div>
+        <Loading/>
       ) : (
-        <Product key={sku} {...otherProductProps} />
+        <Product key={product.sku} product={product} />
       )}
     </>
   );

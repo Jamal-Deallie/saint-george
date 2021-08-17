@@ -9,7 +9,7 @@ import { fetchProducts } from "../../Redux/Actions/productActions";
 import { Yeezy_Items as items } from "../../Shared/Banner_Items";
 import { YeezyModels as models } from "../../Shared/Filter_Items";
 
-const Yeezy = () => {
+const Jordan = () => {
 
   const products = useSelector((state) => state.allProducts.products);
   const dispatch = useDispatch();
@@ -25,21 +25,21 @@ const Yeezy = () => {
   };
 
   
-  const length = filterData("kanye", "men").length;
+  const length = filterData("Air Jordan", "men").length;
 
   
 
   return (
-    <div className="yeezy">
+    <div className="jordan">
       {items.map(({ id, ...otherBannerProps }) => (
         <Banner key={id} {...otherBannerProps} />
       ))}
-      <div className="yeezy--btn">
+      <div className="jordan--btn">
         <SortDropDown />
       </div>
       <Filter results={length} models={models}/>
       <div className="card--container">
-        {filterData("kanye", "men").map(({ sku, ...otherProductProps }) => {
+        {filterData("Air Jordan", "men").map(({ sku, ...otherProductProps }) => {
           return <ProductCard key={sku} {...otherProductProps}/>;
         })}
       </div>
