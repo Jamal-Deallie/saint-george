@@ -1,7 +1,7 @@
 import React from 'react';
-import './Cart.css';
+import './Checkout.css';
 
-const Cart = () => {
+const Checkout = () => {
     return (
       <div className="cart">
         <div className="cart--header">
@@ -25,4 +25,4 @@ const Cart = () => {
     );
 }
 
-export default Cart
+export default Checkout;

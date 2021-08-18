@@ -9,13 +9,14 @@ import CartIcon from "../../Components/CartIcon/CartIcon";
 import SearchIcon from "../../Components/SearchIcon/SearchIcon";
 import "./Header.css";
 import CartDropDown from "../../Components/CartDropdown/CartDropDown";
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
+import { selectCartHidden } from "../../Redux/Selectors/cartSelectors";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
 
-  const hidden = useSelector((state) => state.cart.hidden);
+  const hidden = useSelector(selectCartHidden);
 
   return (
     <div className="header">

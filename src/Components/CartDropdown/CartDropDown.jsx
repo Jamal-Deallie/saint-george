@@ -4,9 +4,11 @@ import Button from "../../Components/Button/Button";
 import CartItem from "../../Components/CartItem/CartItem";
 import { useSelector } from "react-redux";
 import { selectCartItems } from "../../Redux/Selectors/cartSelectors";
+import { withRouter } from "react-router";
 
 
-const CartDropDown = () => {
+
+const CartDropDown = ({history}) => {
   const cartItems = useSelector(selectCartItems);
 
   console.log(cartItems);
@@ -14,16 +16,22 @@ const CartDropDown = () => {
   return (
     <div className="cart--dd">
       <div className="cartdd--items">
-        {cartItems.map((item) => (
-          <CartItem key={item.sku} item={item} />
-        ))}
+        {cartItems.length ? (
+          cartItems.map((item) => <CartItem key={item.sku} item={item} />)
+        ) : (
+          <span>Your cart is empty</span>
+        )}
       </div>
-      <div className="cartdd--button">
-        <Button type="outline">View Cart</Button>
-        <Button type="primary">Proceed to Cart</Button>
+      <div className="cartdd--btn">
+        <div className="cart--btn">
+          <Button type="outline">View Cart</Button>
+        </div>
+        <div className="checkout--btn">
+          <Button type="primary" onClick={()=> history.push('/checkout')}>Proceed to Checkout</Button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default CartDropDown;
+export default withRouter(CartDropDown);

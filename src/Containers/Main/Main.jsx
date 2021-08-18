@@ -8,6 +8,7 @@ import Kids from "../Kids/Kids";
 import Yeezy from '../Yeezy/Yeezy';
 import ProductDetails from "../../Components/ProductDetails/ProductDetails"
 import Footer from "../../Components/Footer/Footer";
+import Checkout from "../Checkout/Checkout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const Main = () => {
@@ -23,6 +24,7 @@ const Main = () => {
         <Route path="/yeezy" component={Yeezy} />
         <Route path="/brand/:brandKeyword" component={Yeezy} />
         <Route path="/product/:productId" exact component={ProductDetails} />
+        <Route path="/checkout" component={Checkout}/>
         <Route>404 Not Found</Route>
       </Switch>
       <Footer />
