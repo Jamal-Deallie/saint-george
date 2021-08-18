@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProduct } from "../../Redux/Actions/productActions";
+import {
+  fetchProduct,
+  removeSelectedProduct,
+} from "../../Redux/Actions/productActions";
 import Product from "../../Components/Product/Product";
 import Loading from "../../Components/Loading/Loading";
 
@@ -15,6 +18,9 @@ const ProductDetails = () => {
 
   useEffect(() => {
     if (productId && productId !== "") dispatch(fetchProduct(productId));
+    return () => {
+      dispatch(removeSelectedProduct());
+    }
   }, [productId]);
 
   const { sku, ...otherProductProps } = product;
