@@ -12,11 +12,11 @@ import { YeezyModels as models } from "../../Shared/Filter_Items";
 const Yeezy = () => {
 
   const products = useSelector((state) => state.allProducts.products);
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, []);
+    useEffect(() => {
+      dispatch(fetchProducts());
+    }, [dispatch]);
 
    const filterData = (keyword, gender) => {
     return products.filter(

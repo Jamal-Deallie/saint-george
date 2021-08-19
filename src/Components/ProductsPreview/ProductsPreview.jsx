@@ -12,7 +12,7 @@ export const ProductsPreview = () => {
 
   useEffect(() => {
     dispatch(fetchProducts());
-  }, []);
+  }, [dispatch]);
 
   console.log("Products:", products);
 

@@ -1,28 +1,30 @@
-import React from 'react';
-import './Checkout.css';
+import React from "react";
+import "./Checkout.css";
+import { useSelector } from "react-redux";
+import {
+  selectCartItems,
+  selectCartTotal,
+} from "../../Redux/Selectors/cartSelectors";
+import CheckoutItem from "../../Components/CheckoutItem/CheckoutItem";
 
 const Checkout = () => {
-    return (
-      <div className="cart">
-        <div className="cart--header">
-          <h3>My Cart</h3>
-          <span></span>
-            </div>
-            <div className="cart--card">
-                <div className="cart--img">
+  const cartItems = useSelector(selectCartItems);
+  const total = useSelector(selectCartTotal);
 
-                </div>
-                <div className="cart-details">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div className="cart--summary">
-                    
-                </div>
-            </div>
+  return (
+    <div className="checkout">
+      <div className="checkout--header">
+        <h3>My Cart</h3>
+        <span>{total}</span>
       </div>
-    );
-}
+      <div className="checkout--card">
+        {cartItems.map((item) => (
+          <CheckoutItem key={item.sku} item={item} />
+        ))}
+        ;
+      </div>
+    </div>
+  );
+};
 
 export default Checkout;

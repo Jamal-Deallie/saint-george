@@ -2,16 +2,16 @@ import React from "react";
 import "./CartDropDown.css";
 import Button from "../../Components/Button/Button";
 import CartItem from "../../Components/CartItem/CartItem";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectCartItems } from "../../Redux/Selectors/cartSelectors";
 import { withRouter } from "react-router";
+import { toggleCartHidden } from "../../Redux/Actions/cartActions";
 
-
-
-const CartDropDown = ({history}) => {
+const CartDropDown = ({ history, ...otherProps }) => {
   const cartItems = useSelector(selectCartItems);
 
-  console.log(cartItems);
+
+  const dispatch = useDispatch();
 
   return (
     <div className="cart--dd">
@@ -27,7 +27,15 @@ const CartDropDown = ({history}) => {
           <Button type="outline">View Cart</Button>
         </div>
         <div className="checkout--btn">
-          <Button type="primary" onClick={()=> history.push('/checkout')}>Proceed to Checkout</Button>
+          <Button
+            type="primary"
+            onClick={() => {
+              history.push("/checkout");
+              dispatch(toggleCartHidden());
+            }}
+          >
+            Proceed to Checkout
+          </Button>
         </div>
       </div>
     </div>

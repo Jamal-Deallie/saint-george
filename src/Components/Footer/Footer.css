@@ -4,9 +4,10 @@
   bottom: 0;
   width: 100vw;
   height: 9rem;
+  margin-top: auto;
 }
 .footer--wrapper {
-  width: 100vw;
+  width: 100%;
   background: var(--navy);
   display: flex;
   justify-content: flex-start;
