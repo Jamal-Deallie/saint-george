@@ -1,9 +1,11 @@
 import { ActionTypes } from "../Contants/action-types";
 import { addProductToCart } from "../Utils/cart.utils";
 
+
 const initialState = {
   hidden: true,
-  cartItems: []
+  cartItems: [],
+  show: false,
 };
 
 export const cartReducer = (state = initialState, action) => {
@@ -13,7 +15,6 @@ export const cartReducer = (state = initialState, action) => {
         ...state,
         hidden: !state.hidden,
       };
-
     case ActionTypes.ADD_ITEM:
       return {
         ...state,
@@ -22,9 +23,15 @@ export const cartReducer = (state = initialState, action) => {
     case ActionTypes.REMOVE_ITEM:
       return {
         ...state,
-        cartItems: state.cartItems.filter(item => item.id !== action.payload.id)
+        cartItems: state.cartItems.filter(
+          (item) => item.id !== action.payload.id
+        ),
       };
-
+    case ActionTypes.TOGGLE_CART_EDIT:
+      return {
+        ...state,
+        show: !state.show,
+      };
     default:
       return state;
   }

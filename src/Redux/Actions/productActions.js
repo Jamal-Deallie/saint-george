@@ -18,7 +18,7 @@ export const fetchProduct = (productId) => async (dispatch) => {
 export const selectedProduct = (product) => {
   return {
     type: ActionTypes.SELECTED_PRODUCT,
-    payload: product,
+    payload: product
   };
 };
 
@@ -27,3 +27,12 @@ export const removeSelectedProduct = () => {
     type: ActionTypes.REMOVE_SELECTED_PRODUCT,
   };
 };
+
+export const addSize = (product) => {
+  return {
+    type: ActionTypes.ADD_SIZE,
+    payload: product.size,
+  };
+
+};
+

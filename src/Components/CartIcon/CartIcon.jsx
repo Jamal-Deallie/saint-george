@@ -21,7 +21,6 @@ const CartIcon = () => {
     <div
       className="cart--icon"
       onClick={() => dispatch(toggleCartHidden())}
-      value
     >
       <BsIcons.BsBag className="bag--icon" />
       <span className="cart--icon_count">{itemCount}</span>

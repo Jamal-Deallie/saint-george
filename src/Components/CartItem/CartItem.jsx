@@ -2,7 +2,8 @@ import React from "react";
 import './CartItem.css';
 
 const CartItem = ({ item }) => {
-    const { small, name, estimatedMarketValue, quantity, colorway } = item;
+  console.log(item);
+    const { small, name, estimatedMarketValue, quantity, colorway, size } = item;
   return (
     <div className="cart--item">
       <div className="cart--item_quantity">
@@ -14,7 +15,7 @@ const CartItem = ({ item }) => {
       <div className="cart--item_details">
         <span>{name}</span>
         <span>{colorway}</span>
-        <span>Size</span>
+        <span>{size}</span>
       </div>
       <div className="cart--item_price">
               <span>{quantity} x ${estimatedMarketValue}</span>

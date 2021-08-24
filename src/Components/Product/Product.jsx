@@ -6,7 +6,7 @@ import { addItem } from "../../Redux/Actions/cartActions";
 import "./Product.css";
 
 const Product = ({ product }) => {
-  const { releaseDate, brand, id, gender, colorway, story, estimatedMarketValue, original, name } = product;
+  const { releaseDate, brand, id, gender, colorway, story, estimatedMarketValue, original, name, size } = product;
   let newDate = new Date(releaseDate);
 
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const Product = ({ product }) => {
         </Button>
       </div>
 
-      <SizeButtons gender={gender} />
+      <SizeButtons product={product}/>
       <div className="product--card_desc">
         <h3>
           Colorway: <span>{colorway}</span>

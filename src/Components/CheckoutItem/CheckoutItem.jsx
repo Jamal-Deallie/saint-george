@@ -5,7 +5,7 @@ import { removeItem } from '../../Redux/Actions/cartActions';
 import { useDispatch } from "react-redux";
 
 const CheckoutItem = ({ item }) => {
-  const { small, name, estimatedMarketValue, quantity, colorway } = item;
+  const { small, name, estimatedMarketValue, quantity, colorway, size } = item;
   const dispatch = useDispatch();
 
   return (
@@ -15,6 +15,7 @@ const CheckoutItem = ({ item }) => {
       </div>
       <div className="checkout-details">
         <span>{name}</span>
+        <span>{size}</span>
         <span>{colorway}</span>
         <span>{quantity}</span>
         <span>{estimatedMarketValue}</span>
